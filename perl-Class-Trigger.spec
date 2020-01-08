@@ -4,12 +4,13 @@
 #
 Name     : perl-Class-Trigger
 Version  : 0.14
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Class-Trigger-0.14.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Class-Trigger-0.14.tar.gz
-Summary  : Mixin to add / call inheritable triggers
+Summary  : 'Mixin to add / call inheritable triggers'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Class-Trigger-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Module::Install)
 
@@ -25,14 +26,23 @@ Summary: dev components for the perl-Class-Trigger package.
 Group: Development
 Provides: perl-Class-Trigger-devel = %{version}-%{release}
 Requires: perl-Class-Trigger = %{version}-%{release}
-Requires: perl-Class-Trigger = %{version}-%{release}
 
 %description dev
 dev components for the perl-Class-Trigger package.
 
 
+%package perl
+Summary: perl components for the perl-Class-Trigger package.
+Group: Default
+Requires: perl-Class-Trigger = %{version}-%{release}
+
+%description perl
+perl components for the perl-Class-Trigger package.
+
+
 %prep
 %setup -q -n Class-Trigger-0.14
+cd %{_builddir}/Class-Trigger-0.14
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -68,8 +78,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Class/Trigger.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Class::Trigger.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Class/Trigger.pm
