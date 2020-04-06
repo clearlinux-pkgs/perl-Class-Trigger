@@ -1,2 +1,3 @@
-0.14
-perl(Module::Install)
+0.15
+perl(IO::Scalar)
+perl(IO::WrapTie)
