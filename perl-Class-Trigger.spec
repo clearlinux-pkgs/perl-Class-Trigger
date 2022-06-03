@@ -4,7 +4,7 @@
 #
 Name     : perl-Class-Trigger
 Version  : 0.15
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Class-Trigger-0.15.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Class-Trigger-0.15.tar.gz
 Summary  : 'Mixin to add / call inheritable triggers'
@@ -127,4 +127,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Class/Trigger.pm
+/usr/lib/perl5/*
