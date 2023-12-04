@@ -4,7 +4,7 @@
 #
 Name     : perl-Class-Trigger
 Version  : 0.15
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Class-Trigger-0.15.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Class-Trigger-0.15.tar.gz
 Summary  : 'Mixin to add / call inheritable triggers'
